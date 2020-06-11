@@ -1,19 +1,22 @@
 {
-    "name": "panique/mini3",
-    "description": "MINI3 - an extremely simple naked PHP application",
+    "name": "annahowell/timesheet",
+    "description": "Timesheet webapp created for a University project in a few days using Mini3 CMS, Datatables and Daypilot Trial",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
-            "name": "Panique",
+            "name": "Anna Howell",
+            "email": "5971775+annahowell@users.noreply.github.com"
+        },
+        {
+            "name": "Panique | Mini 3 Author",
             "email": "panique@firemail.de"
         },
         {
-            "name": "John Dias",
+            "name": "John Dias | Original Mini author",
             "email": "joaodias@noctus.org"
         }
     ],
-    "minimum-stability": "dev",
     "require": {},
     "autoload":
     {

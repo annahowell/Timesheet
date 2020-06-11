@@ -37,9 +37,8 @@ class Application
             $this->url_controller = new $controller();
 
             // check for method: does such a method exist in the controller ?
-            if (method_exists($this->url_controller, $this->url_action) &&
-                is_callable(array($this->url_controller, $this->url_action))) {
-                
+            if (method_exists($this->url_controller, $this->url_action)) {
+
                 if (!empty($this->url_params)) {
                     // Call the method and pass arguments to it
                     call_user_func_array(array($this->url_controller, $this->url_action), $this->url_params);
@@ -53,13 +52,11 @@ class Application
                     // no action defined: call the default index() method of a selected controller
                     $this->url_controller->index();
                 } else {
-                    $page = new \Mini\Controller\ErrorController();
-                    $page->index();
+                    header('location: ' . URL . 'error');
                 }
             }
         } else {
-            $page = new \Mini\Controller\ErrorController();
-            $page->index();
+            header('location: ' . URL . 'error');
         }
     }
 
